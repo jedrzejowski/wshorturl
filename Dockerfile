@@ -7,6 +7,6 @@ WORKDIR /app
 RUN cargo install --path .
 
 
-FROM alpine as backend
+FROM alpine
 
 COPY --from=backend /usr/local/bin/wshorturl /usr/local/bin/wshorturl

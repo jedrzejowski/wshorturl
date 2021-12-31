@@ -1,13 +1,13 @@
-use once_cell::sync::{Lazy, OnceCell};
+use once_cell::sync::{Lazy};
 use serde::Deserialize;
 
 #[derive(Deserialize, Debug)]
 pub struct AppEnv {
     pub host: Option<String>,
-    pub port: Option<i32>,
+    pub port: Option<u16>,
     pub domain: Option<String>,
 
-    pub db: String,
+    pub db: Option<String>,
     pub yaml_file: Option<String>,
 }
 

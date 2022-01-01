@@ -12,5 +12,5 @@ pub struct AppEnv {
 }
 
 pub static APP_ENV: Lazy<AppEnv> = Lazy::new(|| {
-    envy::from_env::<AppEnv>().unwrap()
+    envy::prefixed("WSHORTURL_").from_env::<AppEnv>().unwrap()
 });

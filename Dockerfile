@@ -10,6 +10,7 @@ RUN cargo install --path . --root /usr/local
 FROM alpine
 
 COPY --from=backend /usr/local/bin/wshorturl /usr/local/bin/wshorturl
+COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "/usr/local/bin/wshorturl" ]

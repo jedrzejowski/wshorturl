@@ -12,5 +12,7 @@ FROM alpine
 COPY --from=backend /usr/local/bin/wshorturl /usr/local/bin/wshorturl
 COPY entrypoint.sh /entrypoint.sh
 
+ENV WSHORTURL_HOST=0.0.0.0
+
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "/usr/local/bin/wshorturl" ]

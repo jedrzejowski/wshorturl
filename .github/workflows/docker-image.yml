@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REGISTRY: ghcr.io
-      DOCKER_TAG: ajedrzejowski/wshorturl
+      DOCKER_TAG: ${{ github.actor }}/wshorturl
     steps:
     - uses: actions/checkout@v2
 

@@ -4,7 +4,7 @@ RUN apk add --no-cache musl-dev
 
 COPY . /app
 WORKDIR /app
-RUN cargo install --path .
+RUN cargo install --path . --root /usr/local
 
 
 FROM alpine

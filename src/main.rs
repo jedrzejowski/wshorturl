@@ -12,6 +12,8 @@ use crate::database::yaml_database::YamlFileDatabase;
 async fn main() -> std::io::Result<()> {
     let database: Database;
 
+    println!("{:?}", APP_ENV.yaml_file);
+
     database = YamlFileDatabase::from_file(
         APP_ENV.yaml_file.as_ref().unwrap_or(&"database.yml".to_string())
     ).unwrap().into();
